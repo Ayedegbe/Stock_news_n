@@ -1,13 +1,7 @@
 def reverse(text):
-    see = text.split()
-    y = []
-    print(see)
-    for char in see:
-        if len(char) > 4:
-           # print(char)
-            big = text.replace(char, char[::-1])
-           # print(y)
-            return big
+    see = text.split(" ")
+    return " ".join([char[::-1] if len(char) >=5 else char for char in see])
 
-green = "Whose is ronaldinho"
-print(reverse(green))
+
+green = "Hey fellow warriors"
+print(reverse("This is another test"))
